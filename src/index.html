@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Term Project - Fetch GitHub Releases</title>
+	<link rel="icon" href="data:;base64,=">
+</head>
+
+<body class="bg-dark text-light" data-bs-theme="dark">
+	<div class="container h1 py-5">
+		<p class="mb-3 pb-2 text-center text-warning border-bottom border-5 border-info-subtle">
+			CHECK REPOSITORY FOR RELEASES</p>
+		<form class="d-flex mt-2" role="url">
+			<input id="inputURL" class="form-control me-2" type="url"
+				placeholder="Example: https://github.com/godotengine/godot" aria-label="URL">
+			<button id="btnSubmit" class="btn btn-success" type="submit">ENTER</button>
+		</form>
+		<div id="divContent" class="d-none mt-5 fs-6"></div>
+	</div>
+</body>
+
+</html>
