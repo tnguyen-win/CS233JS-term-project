@@ -6,12 +6,11 @@ const copyPlugin = require("copy-webpack-plugin");
 module.exports = {
 	mode: 'development',
 	entry: {
-		home: './src/js/home.js',
+		index: './src/js/index.js',
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: '[name].bundle.js',
-		assetModuleFilename: "components/[name][ext]",
 		clean: true,
 	},
 	target: 'web',
@@ -52,16 +51,14 @@ module.exports = {
 	plugins: [
 		new htmlWebpackPlugin({
 			template: path.resolve(__dirname, "./src/index.html"),
-			chunks: ["home"],
+			chunks: ["index"],
 			inject: "body",
 			filename: "index.html",
 		}),
 		new copyPlugin({
 			patterns: [
-				{
-					from: path.resolve(__dirname, "src/components"),
-					to: path.resolve(__dirname, "dist/components"),
-				},
+				{ from: path.resolve(__dirname, "src/components"), to: path.resolve(__dirname, "dist/components") },
+				{ from: path.resolve(__dirname, "src/js/services"), to: path.resolve(__dirname, "dist/js/services") },
 			],
 		}),
 	],

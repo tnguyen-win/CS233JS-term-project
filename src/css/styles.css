@@ -1,0 +1,9 @@
+a.h1:hover {
+	text-decoration: underline !important;
+}
+
+@media (min-width: 992px) {
+	.template {
+		width: 8rem;
+	}
+}

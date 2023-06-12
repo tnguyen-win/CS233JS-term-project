@@ -6,18 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Term Project - Fetch GitHub Releases</title>
 	<link rel="icon" href="data:;base64,=">
+	<script src="./js/services/showdown/showdown.min.js"></script>
 </head>
 
 <body class="bg-dark text-light" data-bs-theme="dark">
-	<div class="container h1 py-5">
-		<p class="mb-3 pb-2 text-center text-warning border-bottom border-5 border-info-subtle">
-			CHECK REPOSITORY FOR RELEASES</p>
-		<form class="d-flex mt-2" role="url">
-			<input id="inputURL" class="form-control me-2" type="url"
-				placeholder="Example: https://github.com/godotengine/godot" aria-label="URL">
-			<button id="btnSubmit" class="btn btn-success" type="submit">ENTER</button>
-		</form>
-		<div id="divContent" class="d-none mt-5 fs-6"></div>
+	<div class="container py-5">
+		<p class="display-3 mb-3 pb-2 text-center text-warning border-bottom border-5 border-info-subtle">
+			FETCH GITHUB RELEASES</p>
+		<div class="d-flex mt-2 input-group">
+			<label for="inputOwner" class="input-group-text">OWNER:</label>
+			<input id="inputOwner" class="form-control" type="text" placeholder="e.g. godotengine">
+		</div>
+		<div class="d-flex mt-2 input-group">
+			<label for="inputRepo" class="input-group-text">REPO:</label>
+			<input id="inputRepo" class="form-control" type="text" placeholder="e.g. godot">
+		</div>
+		<div class="d-flex justify-content-end mt-2 input-group">
+			<button id="btnSubmit" class="input-group-text btn btn-success w-50" type="submit">SUBMIT</button>
+		</div>
+		<div id="divContent" class="mt-5 fs-6"></div>
 	</div>
 </body>
 
